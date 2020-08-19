@@ -1,21 +1,158 @@
-{% extends "opencv/base.html" %}
-{% load crispy_forms_tags %}
-{% block content %}
-<!--    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log In</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Login</button>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VisionX Sign-In</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <link rel="stylesheet" href="/static/css/bootstrap-4.2.1.css">
+    <link rel="stylesheet" href="/static/css/style.default.css" id="theme-stylesheet">
+</head>
+
+<body data-gr-c-s-loaded="true">
+<div class="page login-page">
+    <div class="container d-flex align-items-center">
+
+        <div class="form-holder has-shadow">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="info d-flex align-items-center">
+                        <div class="content">
+                            <div class="logo">
+                                <h1>Sign-In</h1>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 bg-white">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form d-flex align-items-center">
+                                    <div class="content">
+
+                                        <div class="text-center" style="padding-bottom: 20px">
+                                            <a href="{% url 'opencv-home' %}" class="href">
+                                                <img src="/static/imgs/visionx-logo.png" class="rounded" width="210"
+                                                     height="118" alt="">
+                                            </a>
+                                        </div>
+
+                                        <form method="post" action="" class="form-validate" id="loginFrom">
+                                            <div class="form-group">
+                                                <input id="login-username" type="text" name="userName" required=""
+                                                       data-msg="Please enter your username" placeholder="Username"
+                                                       class="input-material">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="login-password" type="password" name="passWord" required=""
+                                                       data-msg="Please enter your password" placeholder="Password"
+                                                       class="input-material">
+                                            </div>
+                                            <button id="login" type="submit" class="btn btn-primary">Sign-In</button>
+                                            <div style="margin-top: -40px">
+
+                                                {#<div class="custom-control custom-checkbox " style="float: right;">#}
+                                                {#<input type="checkbox" class="custom-control-input" id="check2">#}
+                                                {#<label class="custom-control-label" for="check2">Auto Login</label>#}
+                                                {#</div>#}
+
+                                                <div class="custom-control custom-checkbox " style="float: right;">
+                                                    <input type="checkbox" class="custom-control-input" id="check1">
+                                                    <label class="custom-control-label" for="check1">Remember me&nbsp;&nbsp;</label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <small>Don't have an account?</small><a href="" class="signup">&nbsp;Create</a>
+                                        <div class="text-center" style="padding-top:20px">
+                                            <p class="mt-5 mb-3 text-muted small">© 2017-2020</p>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-        </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                New user? <a class="ml-2" href="{% url 'register' %}">Start here.</a>
-            </small>
         </div>
-    </div>-->
-{% endblock content %}
+    </div>
+</div>
+</div>
+
+<script src="/static/js/jquery-1.10.2.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap-3.3.4.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.validate.min.js"></script>
+<script src="/static/js/front.js"></script>
+<script>
+    $(function () {
+        /*判断上次是否勾选记住密码和自动登录*/
+        var check1s = localStorage.getItem("check1");
+        var check2s = localStorage.getItem("check2");
+        var oldName = localStorage.getItem("userName");
+        var oldPass = localStorage.getItem("passWord");
+        if (check1s == "true") {
+            $("#login-username").val(oldName);
+            $("#login-password").val(oldPass);
+            $("#check1").prop('checked', true);
+        } else {
+            $("#login-username").val('');
+            $("#login-password").val('');
+            $("#check1").prop('checked', false);
+        }
+        if (check2s == "true") {
+            $("#check2").prop('checked', true);
+            $("#loginFrom").submit();
+            //location="https://www.baidu.com?userName="+oldName+"&passWord="+oldPass;//添加退出当前账号功能
+        } else {
+            $("#check2").prop('checked', false);
+        }
+        /*拿到刚刚注册的账号*/
+        /*if(localStorage.getItem("name")!=null){
+            $("#login-username").val(localStorage.getItem("name"));
+        }*/
+        /*登录*/
+        $("#login").click(function () {
+            var userName = $("#login-username").val();
+            var passWord = $("#login-password").val();
+            /*获取当前输入的账号密码*/
+            localStorage.setItem("userName", userName)
+            localStorage.setItem("passWord", passWord)
+            /*获取记住密码  自动登录的 checkbox的值*/
+            var check1 = $("#check1").prop('checked');
+            var check2 = $('#check2').prop('checked');
+            localStorage.setItem("check1", check1);
+            localStorage.setItem("check2", check2);
+        })
+
+        /*$("#check2").click(function(){
+            var flag=$('#check2').prop('checked');
+            if(flag){
+                var userName=$("#login-username").val();
+                var passWord=$("#login-password").val();
+                $.ajax({
+                    type:"post",
+                    url:"http://localhost:8080/powers/pow/regUsers",
+                    data:{"userName":userName,"passWord":passWord},
+                    async:true,
+                    success:function(res){
+                        alert(res);
+                    }
+                });
+            }
+        })*/
+    })
+</script>
+
+<div id="weava-permanent-marker" date="1597612947192"></div>
+</body>
+</html>

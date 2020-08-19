@@ -1,4 +1,44 @@
-{% extends "opencv/base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-{% endblock content %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'opencv/css/templatemo-style.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/templatemo-style.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="templatemo-flex-row flex-content-row templatemo-overflow-hidden">
+        <div class="col-1 templatemo-overflow-hidden">
+            <div class="templatemo-content-widget white-bg templatemo-overflow-hidden">
+                <i class="fa fa-times"></i>
+                <div class="templatemo-flex-row flex-content-row">
+                    <div class="col-1 col-lg-6 col-md-12">
+                        <h2 class="text-center">Modular<span class="badge">new</span></h2>
+                        <div id="pie_chart_div" class="templatemo-chart"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 33px; height: 300px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="33" height="300" aria-label="A chart." style="overflow: hidden;"><defs id="_ABSTRACT_RENDERER_ID_308"></defs><rect x="0" y="0" width="33" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="7" y="10.316666666666666" font-family="Arial" font-size="9" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">How</text><text text-anchor="start" x="7" y="21.98333333333333" font-family="Arial" font-size="9" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">M…</text><rect x="7" y="2.666666666666666" width="20" height="20.666666666666664" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><rect x="34" y="26" width="9" height="69" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g column-id="Mushrooms"><rect x="34" y="26" width="9" height="9" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><circle cx="38.5" cy="30.5" r="4.5" stroke="none" stroke-width="0" fill="#3366cc"></circle></g><g column-id="Onions"><rect x="34" y="41" width="9" height="9" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><circle cx="38.5" cy="45.5" r="4.5" stroke="none" stroke-width="0" fill="#dc3912"></circle></g><g column-id="Olives"><rect x="34" y="56" width="9" height="9" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><circle cx="38.5" cy="60.5" r="4.5" stroke="none" stroke-width="0" fill="#ff9900"></circle></g><g column-id="Zucchini"><rect x="34" y="71" width="9" height="9" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><circle cx="38.5" cy="75.5" r="4.5" stroke="none" stroke-width="0" fill="#109618"></circle></g><g column-id="Pepperoni"><rect x="34" y="86" width="9" height="9" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><circle cx="38.5" cy="90.5" r="4.5" stroke="none" stroke-width="0" fill="#990099"></circle></g></g><g><path d="M13,150L13,144A6,6,0,0,1,17.242640687119284,154.2426406871193L13,150A0,0,0,0,0,13,150" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path></g><g><path d="M13,150L7,150A6,6,0,0,1,13,144L13,150A0,0,0,0,0,13,150" stroke="#ffffff" stroke-width="1" fill="#990099"></path></g><g><path d="M13,150L8.757359312880716,154.2426406871193A6,6,0,0,1,7,150L13,150A0,0,0,0,0,13,150" stroke="#ffffff" stroke-width="1" fill="#109618"></path></g><g><path d="M13,150L13,156A6,6,0,0,1,8.757359312880716,154.2426406871193L13,150A0,0,0,0,0,13,150" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path></g><g><path d="M13,150L17.242640687119284,154.2426406871193A6,6,0,0,1,13,156L13,150A0,0,0,0,0,13,150" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Topping</th><th>Slices</th></tr></thead><tbody><tr><td>Mushrooms</td><td>3</td></tr><tr><td>Onions</td><td>1</td></tr><tr><td>Olives</td><td>1</td></tr><tr><td>Zucchini</td><td>1</td></tr><tr><td>Pepperoni</td><td>2</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 310px; left: 43px; white-space: nowrap; font-family: Arial; font-size: 9px; font-weight: bold;">M…</div><div></div></div></div>
+                    </div>
+                    <div class="col-1 col-lg-6 col-md-12">
+                        <h2 class="text-center">Interactive<span class="badge">new</span></h2>
+                        <div class="templatemo-chart" id="bar_chart_div"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
+
+
+
+
