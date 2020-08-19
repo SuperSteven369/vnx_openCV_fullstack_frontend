@@ -5,8 +5,9 @@ Reference Link: https://www.intelli-vision.com/
 
 How to use:
 1. Open the terminal and go to /visionx
-2. Run "pip install django-crispy-forms" to download the style
-3. Run "python manage.py runserver" to view our website
+2. Create the virtual environment and install django
+3. Run "pip install django-crispy-forms" to download the style
+4. Run "python manage.py runserver" to view our website
 
 For login and logout page development:
 1. Go to /visionx/users/templates/users
