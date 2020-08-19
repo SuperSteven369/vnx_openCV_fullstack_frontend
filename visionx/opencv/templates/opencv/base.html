@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'opencv/style.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+      .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+      .fa-anchor,.fa-coffee {font-size:200px}
+      nav {width:100%; overflow:auto; background:black;}
+      ul {padding:0; margin:0 0 0 150px; list-style:none;}
+      li {float:right;}
+      .navbar-brand img{position:absolute; margin-top:8px; margin-left:24px;}
+      nav a {width:100px; display:block; padding:20px 15px; text-decoration:none; font-family:Arial; color:#f2f2f2; text-align:center; font-weight:bold; margin-right:25px;}
+      nav a:hover {background:purple;transition:0.5s;text-transform:uppercase;}
+    </style>
+</head>
+
+<body>
+    <div class="Navbar">
+      <div class="navbar-brand">
+        <a href="{% url 'opencv-home' %}">
+          <img src="/static/opencv/image/visionx-logo2.png"/>
+        </a>
+      </div>
+      <nav>
+        <ul>      
+          <li><a href="https://www.visionx.org/">Company</a></li>  
+          <li><a href="{% url 'register' %}">Register</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'opencv-home' %}">Home</a></li>
+        </ul>
+      </nav>  
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <!-- partner lists -->
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+        <h1 class="w3-margin w3-xlarge">Our Partners and Customers</h1>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-row-padding w3-padding-32 w3-center " style="background-image: url('/static/opencv/image/footer_background.jpg'); background-repeat: no-repeat; background-size: 100% 100%; color: AliceBlue;">
+        <div class="w3-content">
+            <!-- adress -->
+            <div class="w3-third" style="width:25%;">
+                <h3>Get in Touch</h3>
+                <p>
+                    250 W Tasman Dr
+                    <br/>
+                    San Jose, CA 95134
+                </p>
+                <p>
+                    phone: +1775 240 9793
+                    <br/>
+                    Fax: +1775 240 9793
+                </p>
+                <p>
+                    Mail:
+                    <a href="support@visionx.org">
+                        support@visionx.org
+                    </a>
+                </p>
+            </div>
+
+            <div class="w3-third" style="width:25%;">
+                <h3>About Us</h3>
+                <p>
+                    VisionX is a cross-industry high-performance AI collaboration
+                    platform.
+                </p>
+                <p>
+                    A sustainable, blockchain based incentive ecosystem to boost the
+                    best AI solutions &amp; datasets across each industry AND for each
+                    customer.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="w3-third" style="width:50%;">
+                <h3>Join Us Now</h3>
+                <p>
+                    We are active on Twitter, Telegram, Medium, Reddit, YouTube,
+                    Instagram, Facebook, LinkedIn, GitHub and Coinmarketcap.
+                </p>
+
+                <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/officialvisionxglobal/"></a>
+                <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/visionx.global/"></a>
+                <a class="fa fa-youtube w3-hover-opacity" href="https://www.youtube.com/channel/UCj0vzmPUv_UF0kO33sZIzvQ"></a>
+                <a class="fa fa-github w3-hover-opacity" href="https://github.com/DeepBrainChain/DBC-FederatedLearning-Client-VNX"></a>
+                <a class="fa fa-twitter w3-hover-opacity" href="https://twitter.com/visionxglobal"></a>
+                <a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/company/visionxglobal/"></a>
+              <p>Powered by <a href="https://www.visionx.org/" target="_blank">visionx</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--    Used to toggle the menu on small screens when clicking on the menu button-->
+    <script>
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+</body>
+</html>

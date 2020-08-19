@@ -1,0 +1,79 @@
+{% extends "opencv/base.html" %}
+{% block content %}
+<!-- Introduction Part -->
+<header class="w3-container w3-center" style="padding:128px 16px; background-image: url('/static/opencv/image/intro_background2.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+  <h1 class="w3-margin w3-jumbo" style="color:AliceBlue; font-size: 80px!important">Introduction</h1>
+  <p class="w3-xlarge" style="color:AliceBlue;">an AI video analysis tool</p>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+</header>
+
+<!-- Cards Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;">
+    <!-- first card -->
+  <div class="w3-third" style="max-width: 410px;">
+    <div class="w3-card">
+      <img src="/static/opencv/image/Face_mask_detection.png" alt="logo" style="width:394px;height:240px;">
+      <div class="w3-container">
+        <h style="font-size: 20px;font-weight:bold;color:rgb(3, 132, 252);"><br>Face Mask Detection for COVID-19</h>
+        <p style="color: gray;">VisionX has a full COVID-19 back-to-work solution including face mask detection, people counting / area occupancy and social distancing.</p>
+        <p style="color: rgb(3, 90, 252);font-weight: bold;">Read More</p>
+      </div>
+    </div>
+  </div>
+    <!-- second card -->
+  <div class="w3-third" style="max-width: 410px;">
+    <div class="w3-card">
+      <img src="/static/opencv/image/turnstiles_with_camera600.jpg" alt="logo" style="width:393px;height:240px;">
+      <div class="w3-container">
+        <h style="font-size: 20px;font-weight:bold;color:rgb(3, 132, 252);"><br>Face Recognition for Control System</h>
+        <p style="color: gray;">VisionX provides face recognition for high speed/high accuracy Smart Access Control solutions. Move people through faster and safer ways.</p>
+        <p style="color: rgb(3, 90, 252);font-weight: bold;">Read More</p>
+      </div>
+    </div>
+  </div>
+    <!-- third card -->
+  <div class="w3-third" style="max-width: 410px;">
+    <div class="w3-card">
+      <img src="/static/opencv/image/smarthome-1.jpg" alt="logo" style="width:395px;height:240px;">
+      <div class="w3-container">
+        <h style="font-size: 20px;font-weight:bold;color:rgb(3, 132, 252);"><br>Smart Home/IoT (OEM)</h>
+        <p style="color: gray;">VisionX is a leading provider of embedded smart camera analytics for Smart Home, with intelligent motion detection and facial recognition.</p>
+        <p style="color: rgb(3, 90, 252);font-weight: bold;">Read More</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slideshows -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content" style="max-width:800px;position:relative">
+      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/Face_mask_detection.png" style="width:100%">
+      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/turnstiles_with_camera600.jpg" style="width:100%">
+      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/smarthome-1.jpg" style="width:100%">
+      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/visionx-logo.png" style="width:100%">
+
+      <a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">❮</a>
+      <a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">❯</a>
+    </div>
+</div>
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+</script>
+{% endblock content %}
+
