@@ -1,13 +1,13 @@
 {% extends "opencv/base.html" %}
 {% block content %}
-<!-- Header -->
-<header class="w3-container w3-center" style="padding:128px 16px; background-color:DodgerBlue">
-  <h1 class="w3-margin w3-jumbo">Introduction</h1>
-  <p class="w3-xlarge">an AI video analysis tool</p>
+<!-- Introduction Part -->
+<header class="w3-container w3-center" style="padding:128px 16px; background-image: url('/static/opencv/image/intro_background2.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+  <h1 class="w3-margin w3-jumbo" style="color:AliceBlue; font-size: 80px!important">Introduction</h1>
+  <p class="w3-xlarge" style="color:AliceBlue;">an AI video analysis tool</p>
   <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
 </header>
 
-<!-- First Grid -->
+<!-- Cards Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;">
     <!-- first card -->
   <div class="w3-third" style="max-width: 410px;">
@@ -44,12 +44,12 @@
   </div>
 </div>
 
-<!-- Second Grid-slideshows -->
+<!-- Slideshows -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content" style="max-width:800px;position:relative">
-      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/visionx-logo.png" style="width:100%">
-      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/visionx-logo.png" style="width:100%">
-      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/visionx-logo.png" style="width:100%">
+      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/Face_mask_detection.png" style="width:100%">
+      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/turnstiles_with_camera600.jpg" style="width:100%">
+      <img class="mySlides w3-animate-opacity" src="/static/opencv/image/smarthome-1.jpg" style="width:100%">
       <img class="mySlides w3-animate-opacity" src="/static/opencv/image/visionx-logo.png" style="width:100%">
 
       <a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">❮</a>
