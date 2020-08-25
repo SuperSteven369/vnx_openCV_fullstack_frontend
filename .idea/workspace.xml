@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f455e16-617f-41b8-b62a-3d044950e7c1" name="Default Changelist" comment="" />
+    <list default="true" id="4f455e16-617f-41b8-b62a-3d044950e7c1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visionx/opencv/templates/opencv/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/visionx/opencv/templates/opencv/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visionx/opencv/templates/opencv/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/visionx/opencv/templates/opencv/base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +36,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="384" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598055682901">
+      <screen x="72" y="27" width="1848" height="887" />
+    </state>
+    <state x="384" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.887@72.27.1848.887" timestamp="1598055682901" />
     <state x="531" y="99" width="1022" height="737" key="SettingsEditor" timestamp="1597873893243">
       <screen x="72" y="27" width="1848" height="887" />
     </state>
